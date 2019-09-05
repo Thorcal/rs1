@@ -1,0 +1,37 @@
+RS1
+
+Check espace disques:
+Sudo fdisk -l —bytes
+
+Afficher les packages installés:
+Sudo apt list —installed
+
+Mettre a jour les packages:
+Sudo apt-get update
+Sudo apt-get upgrade
+
+adduser pseudo
+Sudo vim /etc/sudoers
+
+Tester les droits avec iptables -L
+
+Sur iterm:
+ssh-copy-id -i ~/.ssh/id_rsa.pub pseudo@10.11.222.222 -p 56666
+
+Vm :
+Mettre password authentication yes dans /etc/ssh/sshd_config
+Sudo service ssh restart
+
+Item:
+ssh pseudo@10.11.222.222 -p 56666
+
+Contre le scanning de port:
+portsentry
+
+Vm:
+Net mask:
+sudo vim /etc/network/interfaces.d/enp0s3
+Mettre .0
+Sudo iptables -L pour voir les règles de pare feu
+sudo service --status-all pour voir les services
+
